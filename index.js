@@ -11,14 +11,13 @@ client.once('ready', c => {
 });
 
 client.on('messageReactionAdd', reaction => {
-	console.log(reaction);
 	if (reaction.emoji.name === 'cringe' && reaction.count === 1) {
 		reaction.message.reply("pretty cringe my guy");
 	}
 	else if (reaction.emoji.name === 'cringe' && reaction.count === 2) {
 		reaction.message.reply("whoa tone it down, very cringe");
 	} else return;
-})
+});
 
 client.on('interactionCreate', async interaction => {
 	console.log(interaction);
